@@ -20,6 +20,6 @@ OptionParser.new do |opts|
 end.parse!
 
 # Login to RightScale
-@client = RightApi::Client.new(:email=>options[:email],:password=>options[:password],:account_id=>options[:account_id])
+@client = RightApi::Client.new(:email=>options[:email],:password=>options[:password],:account_id=>options[:account_id],:timeout=>nil)
 
 cloud_hrefs_to_mappings @client

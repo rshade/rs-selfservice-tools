@@ -25,6 +25,6 @@ end.parse!
 
 # Login to RightScale
 @deployment_id = options[:deployment_id]
-@client = RightApi::Client.new(:email=>options[:email],:password=>options[:password],:account_id=>options[:account_id])
+@client = RightApi::Client.new(:email=>options[:email],:password=>options[:password],:account_id=>options[:account_id],:timeout=>nil)
 
 deployment_to_cat_file @client, @deployment_id, options[:deployment_inputs], options[:concurrent_launch]
